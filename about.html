@@ -5,109 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>홍길동 소개</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Mono&display=swap');
+
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --accent-color: #61dafb;
+      --card-bg: #1e1e1e;
+      --shadow-color: rgba(0,0,0,0.8);
+      --hover-color: #21a1f1;
+    }
+
     body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background: #f0f2f5;
       margin: 0; padding: 0;
-      color: #333;
+      font-family: 'Roboto Mono', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+
     header {
-      background: #0078d7;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      background-color: #0d0d0d;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     header h1 {
+      font-family: 'Fira Code', monospace;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.1em;
       margin: 0;
-      font-weight: 900;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
+      color: var(--accent-color);
     }
-    nav {
-      margin-top: 1rem;
-    }
+
     nav a {
-      color: white;
-      margin: 0 1.2rem;
+      color: var(--text-color);
       text-decoration: none;
-      font-weight: 600;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
       font-size: 1rem;
-      transition: color 0.3s;
+      letter-spacing: 0.05em;
     }
+
     nav a:hover {
-      color: #ffdd57;
+      color: var(--hover-color);
     }
+
     main {
       max-width: 900px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
+
     h2 {
-      border-left: 6px solid #0078d7;
-      padding-left: 12px;
-      color: #0078d7;
+      font-family: 'Fira Code', monospace;
+      font-size: 2rem;
       margin-bottom: 1rem;
-      font-size: 1.8rem;
+      color: var(--accent-color);
+      border-left: 6px solid var(--accent-color);
+      padding-left: 0.8rem;
+      user-select: none;
     }
+
     p {
       font-size: 1.1rem;
-      line-height: 1.6;
-      color: #444;
+      color: #ccc;
+      margin-bottom: 1.2rem;
+      user-select: text;
     }
+
     footer {
       text-align: center;
-      padding: 1.2rem;
-      background: #222;
-      color: #ccc;
-      font-size: 0.9rem;
-      margin-top: 4rem;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #666;
+      user-select: none;
     }
-    a.external-link {
-      color: #0078d7;
+
+    a.contact-link {
+      color: var(--accent-color);
       font-weight: 600;
+      font-family: 'Fira Code', monospace;
       text-decoration: none;
+      transition: color 0.3s ease;
+      user-select: text;
     }
-    a.external-link:hover {
+    a.contact-link:hover {
+      color: var(--hover-color);
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>홍길동 소개</h1>
+    <h1>HONG GILDONG</h1>
     <nav>
-      <a href="index.html">홈</a>
-      <a href="projects.html">프로젝트</a>
-      <a href="about.html">소개</a>
-      <a href="#contact">연락처</a>
+      <a href="index.html">HOME</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="index.html#contact">CONTACT</a>
     </nav>
   </header>
+
   <main>
     <section>
-      <h2>저에 대해</h2>
+      <h2>About Me</h2>
       <p>
-        안녕하세요, 저는 다양한 분야의 개발을 즐기는 홍길동입니다.  
-        아두이노와 IoT를 통해 하드웨어와 소프트웨어를 연결하고,  
-        Java와 Android Studio를 활용해 모바일 앱을 개발하며,  
+        안녕하세요, 저는 다양한 분야의 개발을 즐기는 홍길동입니다.<br/>
+        아두이노와 IoT를 통해 하드웨어와 소프트웨어를 연결하고,<br/>
+        Java와 Android Studio를 활용해 모바일 앱을 개발하며,<br/>
         JSP와 데이터베이스를 이용한 웹 개발까지 폭넓게 경험했습니다.
       </p>
       <p>
-        문제를 분석하고, 사용자 입장에서 생각하며,  
-        실생활에 도움이 되는 서비스를 만드는 것을 목표로 하고 있습니다.  
+        문제를 분석하고, 사용자 입장에서 생각하며,<br/>
+        실생활에 도움이 되는 서비스를 만드는 것을 목표로 하고 있습니다.<br/>
         앞으로도 지속적으로 새로운 기술을 배우고 프로젝트를 확장해 나가겠습니다.
       </p>
     </section>
 
-    <section id="contact">
-      <h2>연락처</h2>
-      <p>이메일: <a href="mailto:your.email@example.com" class="external-link">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourgithubid" target="_blank" class="external-link">https://github.com/yourgithubid</a></p>
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your.email@example.com" class="contact-link">your.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/yourgithubid" target="_blank" class="contact-link">github.com/yourgithubid</a></p>
     </section>
   </main>
+
   <footer>
-    © 2025 홍길동. All rights reserved.
+    © 2025 Hong Gildong. All rights reserved.
   </footer>
 </body>
 </html>
