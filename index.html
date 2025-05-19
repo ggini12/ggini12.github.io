@@ -5,39 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>홍길동 포트폴리오</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Mono&display=swap');
+
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --accent-color: #61dafb;
+      --card-bg: #1e1e1e;
+      --shadow-color: rgba(0,0,0,0.8);
+      --hover-color: #21a1f1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background: #f0f2f5;
       margin: 0; padding: 0;
-      color: #333;
+      font-family: 'Roboto Mono', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+
     header {
-      background: #0078d7;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      background-color: #0d0d0d;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     header h1 {
+      font-family: 'Fira Code', monospace;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.1em;
       margin: 0;
-      font-weight: 900;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
+      color: var(--accent-color);
     }
-    nav {
-      margin-top: 1rem;
-    }
+
     nav a {
-      color: white;
-      margin: 0 1.2rem;
+      color: var(--text-color);
       text-decoration: none;
-      font-weight: 600;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
       font-size: 1rem;
-      transition: color 0.3s;
+      letter-spacing: 0.05em;
     }
+
     nav a:hover {
-      color: #ffdd57;
+      color: var(--hover-color);
     }
 
     main {
@@ -51,144 +76,157 @@
     }
 
     h2 {
-      border-left: 6px solid #0078d7;
-      padding-left: 12px;
-      color: #0078d7;
+      font-family: 'Fira Code', monospace;
+      font-size: 2rem;
       margin-bottom: 1rem;
-      font-size: 1.8rem;
+      color: var(--accent-color);
+      border-left: 6px solid var(--accent-color);
+      padding-left: 0.8rem;
+      user-select: none;
     }
 
-    .skills-list {
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .tech-list {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+      margin-top: 1rem;
     }
-    .skills-list li {
-      background: #0078d7;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
+
+    .tech-item {
+      background: var(--card-bg);
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
       font-weight: 600;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      font-family: 'Fira Code', monospace;
+      font-size: 0.95rem;
+      color: var(--accent-color);
+      user-select: none;
+      box-shadow: 0 2px 5px rgba(97,218,251,0.4);
+      transition: transform 0.2s ease;
+    }
+    .tech-item:hover {
+      transform: scale(1.1);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2rem;
     }
 
     .project-card {
-      background: white;
-      border-radius: 10px;
-      padding: 1.2rem 1.6rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: var(--card-bg);
+      padding: 1.8rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+      cursor: default;
+      transition: box-shadow 0.3s ease;
     }
+
     .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 25px var(--accent-color);
     }
 
     .project-title {
-      font-weight: 800;
+      font-family: 'Fira Code', monospace;
       font-size: 1.3rem;
-      color: #004a9f;
+      color: var(--accent-color);
+      margin-bottom: 0.6rem;
+      user-select: text;
     }
+
     .project-desc {
-      margin-top: 0.5rem;
       font-size: 1rem;
-      line-height: 1.5;
-      color: #555;
+      color: #ccc;
+      margin-bottom: 1rem;
+      user-select: text;
     }
 
     footer {
       text-align: center;
-      padding: 1.2rem;
-      background: #222;
-      color: #ccc;
-      font-size: 0.9rem;
-      margin-top: 4rem;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #666;
+      user-select: none;
     }
 
-    a.external-link {
-      color: #0078d7;
-      font-weight: 600;
+    .contact-link {
+      color: var(--accent-color);
       text-decoration: none;
+      font-weight: 600;
+      font-family: 'Fira Code', monospace;
+      transition: color 0.3s ease;
+      user-select: text;
     }
-    a.external-link:hover {
+    .contact-link:hover {
+      color: var(--hover-color);
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>홍길동 포트폴리오</h1>
+    <h1>HONG GILDONG</h1>
     <nav>
-      <a href="#skills">기술 스택</a>
-      <a href="#projects">프로젝트</a>
-      <a href="#contact">연락처</a>
+      <a href="index.html">HOME</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="#contact">CONTACT</a>
     </nav>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>안녕하세요!</h2>
-      <p>저는 아두이노, 자바, 안드로이드, JSP, 데이터베이스를 활용해 다양한 프로젝트를 수행하는 개발자 홍길동입니다.  
-      임베디드부터 모바일, 웹까지 폭넓은 경험을 가지고 있습니다.</p>
+    <section>
+      <h2>Introduction</h2>
+      <p>다양한 개발 경험을 가진 열정적인 개발자 홍길동입니다.  
+         아두이노, Java, Android Studio, JSP, 데이터베이스 등 폭넓게 공부하고 프로젝트를 진행하고 있습니다.</p>
     </section>
 
-    <section id="skills">
-      <h2>기술 스택</h2>
-      <ul class="skills-list">
-        <li>Arduino</li>
-        <li>Java</li>
-        <li>Android Studio</li>
-        <li>JSP / Servlet</li>
-        <li>MySQL / MariaDB</li>
-        <li>HTML / CSS / JavaScript</li>
-        <li>Git / GitHub</li>
-      </ul>
+    <section>
+      <h2>Tech Stack</h2>
+      <div class="tech-list">
+        <div class="tech-item">Arduino</div>
+        <div class="tech-item">Java</div>
+        <div class="tech-item">Android Studio</div>
+        <div class="tech-item">JSP</div>
+        <div class="tech-item">MariaDB / MySQL</div>
+        <div class="tech-item">HTML / CSS / JavaScript</div>
+        <div class="tech-item">API Integration</div>
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>프로젝트</h2>
-
-      <div class="project-card">
-        <div class="project-title">중고책 거래 웹사이트 (JSP + MariaDB)</div>
-        <div class="project-desc">
-          JSP와 MariaDB를 연동해 구현한 중고책 거래 플랫폼입니다.<br />
-          도서 등록, 카테고리 및 가격대별 탐색, 바로 구매/장바구니, 회원가입 및 로그인, 마이페이지, 게시판(Q&A, 자유) 기능을 포함하여 실제 서비스 수준으로 개발했습니다.<br />
-          웹 개발과 데이터베이스 연동 경험을 쌓은 대표 프로젝트입니다.
+    <section>
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3 class="project-title">중고책 거래 웹사이트</h3>
+          <p class="project-desc">JSP와 MariaDB 연동, 도서 등록과 회원관리, 바로구매/장바구니 기능 구현.</p>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">안드로이드 간단 앱들</h3>
+          <p class="project-desc">설문조사, To-Do 리스트, 여행 팁 앱 등 다양한 모바일 앱 개발 경험.</p>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">아두이노 기상 알림기</h3>
+          <p class="project-desc">외부 API 연동으로 여러나라 실시간 날씨 정보 LED 표시 프로젝트.</p>
         </div>
       </div>
-
-      <div class="project-card">
-        <div class="project-title">안드로이드 스튜디오 간단 앱들</div>
-        <div class="project-desc">
-          Android Studio를 활용해 제작한 다양한 간단 앱들입니다.<br />
-          설문조사 앱, To-Do 리스트, 여행 팁 앱 등 UI/UX 중심의 앱을 구현했으며, SQLite 및 그래프 표시 기능 등을 포함합니다.<br />
-          모바일 앱 개발 역량과 사용자 경험 설계 경험을 쌓았습니다.
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-title">아두이노 기반 다국가 기상 정보 알림기</div>
-        <div class="project-desc">
-          아두이노와 NodeMCU를 활용해 외부 기상 API와 연동하여 여러 나라의 날씨 정보를 실시간으로 수집하고 LED 디스플레이로 알림을 제공하는 IoT 프로젝트입니다.<br />
-          하드웨어와 소프트웨어, API 연동을 융합한 프로젝트로, 실생활 문제 해결에 초점을 맞추었습니다.
-        </div>
-      </div>
-
     </section>
 
-    <section id="contact">
-      <h2>연락처</h2>
-      <p>이메일: <a href="mailto:your.email@example.com" class="external-link">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourgithubid" target="_blank" class="external-link">https://github.com/yourgithubid</a></p>
+    <section id="contact" style="margin-top:4rem;">
+      <h2>Contact</h2>
+      <p>이메일: <a href="mailto:your.email@example.com" class="contact-link">your.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/yourgithubid" target="_blank" class="contact-link">github.com/yourgithubid</a></p>
     </section>
   </main>
 
   <footer>
-    © 2025 홍길동. All rights reserved.
+    © 2025 Hong Gildong. All rights reserved.
   </footer>
 </body>
 </html>
