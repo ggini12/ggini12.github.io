@@ -1,59 +1,45 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>배진우 소개</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Bae Jinwoo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Mono&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Mono&display=swap');
-
     :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --accent-color: #61dafb;
-      --card-bg: #1e1e1e;
-      --shadow-color: rgba(0,0,0,0.8);
-      --hover-color: #21a1f1;
+      --bg-color: #0e0e0e;
+      --text-color: #f0f0f0;
+      --accent-color: #00d8ff;
+      --hover-color: #aaffff;
     }
 
     body {
-      margin: 0; padding: 0;
-      font-family: 'Roboto Mono', monospace;
+      margin: 0;
+      font-family: 'Fira Code', monospace;
       background-color: var(--bg-color);
       color: var(--text-color);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #0d0d0d;
-      padding: 1.5rem 2rem;
+      background: #111;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 12px var(--shadow-color);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     header h1 {
-      font-family: 'Fira Code', monospace;
-      font-weight: 700;
-      font-size: 1.8rem;
-      letter-spacing: 0.1em;
       margin: 0;
+      font-size: 1.5rem;
       color: var(--accent-color);
     }
 
     nav a {
+      margin-left: 1.5rem;
       color: var(--text-color);
       text-decoration: none;
-      margin-left: 2rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      font-size: 1rem;
-      letter-spacing: 0.05em;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -61,47 +47,27 @@
     }
 
     main {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
     }
 
     h2 {
-      font-family: 'Fira Code', monospace;
       font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--accent-color);
-      border-left: 6px solid var(--accent-color);
-      padding-left: 0.8rem;
-      user-select: none;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
     }
 
     p {
       font-size: 1.1rem;
-      color: #ccc;
-      margin-bottom: 1.2rem;
-      user-select: text;
     }
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.85rem;
-      color: #666;
-      user-select: none;
-    }
-
-    a.contact-link {
-      color: var(--accent-color);
-      font-weight: 600;
-      font-family: 'Fira Code', monospace;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      user-select: text;
-    }
-    a.contact-link:hover {
-      color: var(--hover-color);
-      text-decoration: underline;
+      padding: 2rem 0;
+      background: #111;
+      color: #999;
     }
   </style>
 </head>
@@ -112,35 +78,29 @@
       <a href="index.html">HOME</a>
       <a href="projects.html">PROJECTS</a>
       <a href="about.html">ABOUT</a>
-      <a href="index.html#contact">CONTACT</a>
+      <a href="resume.pdf" target="_blank">RESUME</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        안녕하세요, 저는 다양한 분야의 개발을 즐기는 배진우입니다.<br/>
-        아두이노와 IoT를 통해 하드웨어와 소프트웨어를 연결하고,<br/>
-        Java와 Android Studio를 활용해 모바일 앱을 개발하며,<br/>
-        JSP와 데이터베이스를 이용한 웹 개발까지 폭넓게 경험했습니다.
-      </p>
-      <p>
-        문제를 분석하고, 사용자 입장에서 생각하며,<br/>
-        실생활에 도움이 되는 서비스를 만드는 것을 목표로 하고 있습니다.<br/>
-        앞으로도 지속적으로 새로운 기술을 배우고 프로젝트를 확장해 나가겠습니다.
-      </p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com" class="contact-link">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourgithubid" target="_blank" class="contact-link">github.com/yourgithubid</a></p>
-    </section>
+    <h2>About Me</h2>
+    <p>
+      안녕하세요, 배진우입니다. <br><br>
+      저는 아두이노, 안드로이드 스튜디오, JSP, Java, 데이터베이스 등 다양한 기술 스택을 활용하여 프로젝트를 수행해왔습니다. 
+      사용자 중심의 기능 구현과 문제 해결에 집중하며 꾸준히 실력을 키워나가고 있습니다.
+    </p>
+    <p>
+      최근에는 얼굴 인식과 드론 제어를 결합한 프로젝트에도 도전했으며,
+      단순한 기능 구현을 넘어서 실제 생활에 도움이 되는 응용 프로그램 제작을 목표로 하고 있습니다.
+    </p>
+    <p>
+      이메일: jinwoo.dev@example.com<br>
+      GitHub: <a href="https://github.com/yourgithub" target="_blank">https://github.com/yourgithub</a>
+    </p>
   </main>
 
   <footer>
-    © 2025 Bae jinwoo. All rights reserved.
+    © 2025 Bae Jinwoo. All rights reserved.
   </footer>
 </body>
 </html>
