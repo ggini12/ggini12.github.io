@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>홍길동 프로젝트</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f0f2f5;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header {
+      background: #0078d7;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 900;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1.2rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd57;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      border-left: 6px solid #0078d7;
+      padding-left: 12px;
+      color: #0078d7;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .project-detail {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    h3 {
+      color: #004a9f;
+      margin-top: 0;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.2rem;
+      color: #444;
+    }
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background: #222;
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+    a.external-link {
+      color: #0078d7;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a.external-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>홍길동 프로젝트</h1>
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="about.html">소개</a>
+      <a href="index.html#contact">연락처</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>프로젝트 상세</h2>
+
+      <div class="project-detail">
+        <h3>중고책 거래 웹사이트 (JSP + MariaDB)</h3>
+        <p>JSP와 MariaDB를 연동하여 구현한 중고책 거래 플랫폼입니다.</p>
+        <ul>
+          <li>도서 등록, 카테고리 및 가격대별 탐색 기능</li>
+          <li>회원가입, 로그인, 마이페이지 관리 기능</li>
+          <li>바로 구매, 장바구니 기능 구현</li>
+          <li>Q&A와 자유 게시판 포함</li>
+          <li>프로젝트 기간: 3개월</li>
+        </ul>
+        <p>웹 개발, 서버-클라이언트 통신, 데이터베이스 연동, 세션 관리 등 실무 경험을 쌓았습니다.</p>
+      </div>
+
+      <div class="project-detail">
+        <h3>안드로이드 스튜디오 간단 앱들</h3>
+        <p>Android Studio를 활용하여 다양한 간단 앱을 개발하였습니다.</p>
+        <ul>
+          <li>설문조사 앱: 10개 질문, 결과 그래프 표시</li>
+          <li>To-Do 리스트 앱: SQLite 데이터 저장, UI/UX 구현</li>
+          <li>여행 팁 앱: 여러 나라 문화와 문장 제공</li>
+          <li>프로젝트 기간: 2개월</li>
+        </ul>
+        <p>모바일 앱 개발, SQLite 데이터베이스, 그래프 라이브러리 활용 경험을 갖췄습니다.</p>
+      </div>
+
+      <div class="project-detail">
+        <h3>아두이노 기반 다국가 기상 정보 알림기</h3>
+        <p>아두이노와 NodeMCU를 활용해 외부 기상 API와 연동하여 여러 나라의 실시간 날씨 정보를 LED로 표시하는 프로젝트입니다.</p>
+        <ul>
+          <li>외부 API를 이용한 기상 정보 수집 및 가공</li>
+          <li>IoT 디바이스 제어 및 네트워크 통신 구현</li>
+          <li>실생활 문제 해결을 위한 프로젝트</li>
+          <li>프로젝트 기간: 1.5개월</li>
+        </ul>
+        <p>하드웨어와 소프트웨어 통합 능력과 API 활용 역량을 강화했습니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 홍길동. All rights reserved.
+  </footer>
+</body>
+</html>
