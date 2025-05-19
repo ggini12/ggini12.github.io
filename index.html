@@ -1,147 +1,194 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="개발자 포트폴리오">
-    <title>포트폴리오</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            padding: 14px 20px;
-            text-align: center;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .section {
-            padding: 40px;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .projects, .skills {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .card {
-            background-color: white;
-            margin: 15px;
-            padding: 20px;
-            width: 250px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>홍길동 포트폴리오</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f0f2f5;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header {
+      background: #0078d7;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 900;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1.2rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      border-left: 6px solid #0078d7;
+      padding-left: 12px;
+      color: #0078d7;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills-list li {
+      background: #0078d7;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .project-title {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #004a9f;
+    }
+    .project-desc {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background: #222;
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+
+    a.external-link {
+      color: #0078d7;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a.external-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>ㅂㅈㅇ 포트폴리오</h1>
-        <p>웹 개발자 | 풀스택 개발자</p>
-    </header>
-
+  <header>
+    <h1>홍길동 포트폴리오</h1>
     <nav>
-        <a href="#about">소개</a>
-        <a href="#projects">프로젝트</a>
-        <a href="#skills">기술 스택</a>
-        <a href="#contact">연락처</a>
+      <a href="#skills">기술 스택</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락처</a>
     </nav>
+  </header>
 
-    <section id="about" class="section">
-        <h2>소개</h2>
-        <p>저는 웹 개발자로, 다양한 기술 스택을 사용하여 웹 애플리케이션을 개발하고 있습니다. 항상 새로운 기술을 배우고, 창의적인 방법으로 문제를 해결하는 것을 좋아합니다.</p>
+  <main>
+    <section class="intro">
+      <h2>안녕하세요!</h2>
+      <p>저는 아두이노, 자바, 안드로이드, JSP, 데이터베이스를 활용해 다양한 프로젝트를 수행하는 개발자 홍길동입니다.  
+      임베디드부터 모바일, 웹까지 폭넓은 경험을 가지고 있습니다.</p>
     </section>
 
-    <section id="projects" class="section">
-        <h2>프로젝트</h2>
-        <div class="projects">
-            <div class="card">
-                <img src="https://via.placeholder.com/250" alt="프로젝트 1 이미지">
-                <h3>프로젝트 1</h3>
-                <p>이 프로젝트는 웹 애플리케이션으로, 사용자가 데이터를 쉽게 관리할 수 있게 도와줍니다.</p>
-                <a href="#">자세히 보기</a>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/250" alt="프로젝트 2 이미지">
-                <h3>프로젝트 2</h3>
-                <p>이 프로젝트는 모바일 반응형 웹 디자인을 적용한 쇼핑몰 웹사이트입니다.</p>
-                <a href="#">자세히 보기</a>
-            </div>
-            <!-- 추가적인 프로젝트 카드 -->
+    <section id="skills">
+      <h2>기술 스택</h2>
+      <ul class="skills-list">
+        <li>Arduino</li>
+        <li>Java</li>
+        <li>Android Studio</li>
+        <li>JSP / Servlet</li>
+        <li>MySQL / MariaDB</li>
+        <li>HTML / CSS / JavaScript</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>프로젝트</h2>
+
+      <div class="project-card">
+        <div class="project-title">중고책 거래 웹사이트 (JSP + MariaDB)</div>
+        <div class="project-desc">
+          JSP와 MariaDB를 연동해 구현한 중고책 거래 플랫폼입니다.<br />
+          도서 등록, 카테고리 및 가격대별 탐색, 바로 구매/장바구니, 회원가입 및 로그인, 마이페이지, 게시판(Q&A, 자유) 기능을 포함하여 실제 서비스 수준으로 개발했습니다.<br />
+          웹 개발과 데이터베이스 연동 경험을 쌓은 대표 프로젝트입니다.
         </div>
-    </section>
+      </div>
 
-    <section id="skills" class="section">
-        <h2>기술 스택</h2>
-        <div class="skills">
-            <div class="card">
-                <h3>HTML & CSS</h3>
-                <p>웹 페이지의 구조와 스타일링을 맡습니다.</p>
-            </div>
-            <div class="card">
-                <h3>JavaScript</h3>
-                <p>동적인 웹 애플리케이션을 구현하는 데 사용됩니다.</p>
-            </div>
-            <div class="card">
-                <h3>React</h3>
-                <p>사용자 인터페이스를 효율적으로 구축할 수 있는 라이브러리입니다.</p>
-            </div>
-            <!-- 추가적인 기술 스택 카드 -->
+      <div class="project-card">
+        <div class="project-title">안드로이드 스튜디오 간단 앱들</div>
+        <div class="project-desc">
+          Android Studio를 활용해 제작한 다양한 간단 앱들입니다.<br />
+          설문조사 앱, To-Do 리스트, 여행 팁 앱 등 UI/UX 중심의 앱을 구현했으며, SQLite 및 그래프 표시 기능 등을 포함합니다.<br />
+          모바일 앱 개발 역량과 사용자 경험 설계 경험을 쌓았습니다.
         </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">아두이노 기반 다국가 기상 정보 알림기</div>
+        <div class="project-desc">
+          아두이노와 NodeMCU를 활용해 외부 기상 API와 연동하여 여러 나라의 날씨 정보를 실시간으로 수집하고 LED 디스플레이로 알림을 제공하는 IoT 프로젝트입니다.<br />
+          하드웨어와 소프트웨어, API 연동을 융합한 프로젝트로, 실생활 문제 해결에 초점을 맞추었습니다.
+        </div>
+      </div>
+
     </section>
 
-    <section id="contact" class="section">
-        <h2>연락처</h2>
-        <p>이메일: <a href="mailto:example@example.com">example@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+    <section id="contact">
+      <h2>연락처</h2>
+      <p>이메일: <a href="mailto:your.email@example.com" class="external-link">your.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/yourgithubid" target="_blank" class="external-link">https://github.com/yourgithubid</a></p>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2025 홍길동 | <a href="#about">About Me</a> | <a href="#projects">Projects</a> | <a href="#skills">Skills</a> | <a href="#contact">Contact</a></p>
-    </footer>
+  <footer>
+    © 2025 홍길동. All rights reserved.
+  </footer>
 </body>
 </html>
-
