@@ -1,59 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>배진우 프로젝트</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bae Jinwoo | Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Mono&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Mono&display=swap');
-
     :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --accent-color: #61dafb;
+      --bg-color: #0e0e0e;
+      --text-color: #f0f0f0;
+      --accent-color: #00d8ff;
+      --hover-color: #aaffff;
       --card-bg: #1e1e1e;
-      --shadow-color: rgba(0,0,0,0.8);
-      --hover-color: #21a1f1;
     }
 
     body {
-      margin: 0; padding: 0;
-      font-family: 'Roboto Mono', monospace;
+      margin: 0;
+      font-family: 'Fira Code', monospace;
       background-color: var(--bg-color);
       color: var(--text-color);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #0d0d0d;
-      padding: 1.5rem 2rem;
+      background: #111;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 12px var(--shadow-color);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
     header h1 {
-      font-family: 'Fira Code', monospace;
-      font-weight: 700;
-      font-size: 1.8rem;
-      letter-spacing: 0.1em;
       margin: 0;
+      font-size: 1.5rem;
       color: var(--accent-color);
     }
 
     nav a {
+      margin-left: 1.5rem;
       color: var(--text-color);
       text-decoration: none;
-      margin-left: 2rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      font-size: 1rem;
-      letter-spacing: 0.05em;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -61,87 +51,49 @@
     }
 
     main {
+      padding: 2rem;
       max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+      margin: auto;
     }
 
     h2 {
-      font-family: 'Fira Code', monospace;
-      font-size: 2rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.3rem;
       margin-bottom: 1.5rem;
-      color: var(--accent-color);
-      border-left: 6px solid var(--accent-color);
-      padding-left: 0.8rem;
-      user-select: none;
     }
 
     .project-detail {
       background: var(--card-bg);
+      padding: 1.5rem;
       border-radius: 12px;
-      padding: 2rem 2.5rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.9);
-      margin-bottom: 2.5rem;
-      user-select: text;
-      transition: box-shadow 0.3s ease;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
 
-    .project-detail:hover {
-      box-shadow: 0 10px 30px var(--accent-color);
-    }
-
-    h3 {
-      font-family: 'Fira Code', monospace;
-      font-size: 1.5rem;
+    .project-detail h3 {
       color: var(--accent-color);
-      margin-top: 0;
-      margin-bottom: 0.8rem;
-      user-select: text;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #ccc;
-      margin-bottom: 1rem;
     }
 
     ul {
-      margin-left: 1.3rem;
-      margin-bottom: 1rem;
-      color: #ccc;
+      padding-left: 1.2rem;
     }
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.85rem;
-      color: #666;
-      user-select: none;
-    }
-
-    a.contact-link {
-      color: var(--accent-color);
-      font-weight: 600;
-      font-family: 'Fira Code', monospace;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      user-select: text;
-    }
-    a.contact-link:hover {
-      color: var(--hover-color);
-      text-decoration: underline;
+      padding: 2rem 0;
+      background: #111;
+      color: #999;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>HONG GILDONG</h1>
+    <h1>BAE JINWOO</h1>
     <nav>
       <a href="index.html">HOME</a>
       <a href="projects.html">PROJECTS</a>
       <a href="about.html">ABOUT</a>
-      <a href="index.html#contact">CONTACT</a>
+      <a href="resume.pdf" target="_blank">RESUME</a>
     </nav>
   </header>
 
@@ -179,10 +131,20 @@
       </ul>
     </div>
 
+    <div class="project-detail">
+      <h3>얼굴 인식 기반 드론 탐색 시스템</h3>
+      <p>사용자가 업로드한 이미지와 실제 사람을 비교해 인식한 후, 해당 인물의 위치와 장소를 파악하여 알려주는 드론 프로젝트.</p>
+      <ul>
+        <li>Tello 드론과 Python 기반 제어</li>
+        <li>얼굴 인식(OpenCV) 및 실시간 카메라 영상 분석</li>
+        <li>좌표 기반 위치 탐색 및 결과 출력</li>
+      </ul>
+    </div>
+
   </main>
 
   <footer>
-    © 2025 Bae jinwoo. All rights reserved.
+    © 2025 Bae Jinwoo. All rights reserved.
   </footer>
 </body>
 </html>
